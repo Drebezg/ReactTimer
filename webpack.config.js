@@ -28,7 +28,8 @@ module.exports = {
 			Timer: 'app/components/Timer.jsx',
 			Countdown: 'app/components/Countdown.jsx',
 			Clock: 'app/components/Clock.jsx',
-			CountdownForm: 'app/components/CountdownForm.jsx'
+			CountdownForm: 'app/components/CountdownForm.jsx',
+			Controls: 'app/components/Controls.jsx'
 		},
 		extensions: ['.js', '.jsx']
 	},
@@ -36,10 +37,11 @@ module.exports = {
 		rules: [
 			{
 				test: /\.jsx?$/,
-				loader: 'babel-loader',
-				query: {
-					presets: ['react', 'es2015', 'stage-0']
-				},
+				loader: 'babel-loader?presets[]=react,presets[]=es2015,presets[]=stage-0',
+				//default  - del all from ? and uncomment
+				// query: {
+				// 	presets: ['react', 'es2015', 'stage-0']
+				// },
 				exclude: /(node_modules|bower_components)/,
 			}
 		]
